@@ -11,7 +11,7 @@ Add a new server on your settings.xml
 </server>
 
 
-### How to build
+# How to build
 
 ```
 mvn clean install 
@@ -19,15 +19,15 @@ mvn clean install
 ```
 
 
-### Build and Deploy your Docker Image
+# Build and Deploy your Docker Image
 
 
 ```
-mvn clean install dockerfile:push -Ddocker.user=${docker.hub.user}  -Ddocker.password=YOUR_PASSWORD
+mvn clean install dockerfile:push -Ddocker.user=${dockerHubUser}  -Ddocker.password=YOUR_PASSWORD
 ```
 
-### Running your docker image
+# Running your docker image
 
 ```
-docker run --rm -p 8080:8080 ${docker.hub.user}/${artifactId}
+docker run --rm -p 8080:8080 ${dockerHubUser}/${artifactId}
 ```
